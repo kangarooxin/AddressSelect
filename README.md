@@ -27,3 +27,46 @@ $('#addressSelect').ChinaAddressSelect({
     }
 });
 ```
+
+### Get Address Object:
+
+```javascript
+var address = $.ChinaAddressSelect.get(id);
+
+address.getId();
+address.getName();
+address.getZipCode();
+address.getType();
+```
+
+ChinaAddressShow
+==================
+
+显示省市
+
+### Useage:
+
+```html
+<div class="address" address="5:53:647"></div>
+<div class="address" address="2"></div>
+<div class="address" address="36"></div>
+<div class="address" address="389"></div>
+```
+
+```javascript
+$('.address').ChinaAddressShow();
+```
+
+### Options;
+```javascript
+$('.address').ChinaAddressShow({
+    attr_name: 'address',//属性标签
+    attr_split: ':',//分隔符
+    format: function($ele, address) {//自定义显示方式
+        $ele.append('<span>' + address.getName() + '</span>');
+        if(address.getType() == 'county') {
+            $ele.append('<span>(' + address.getZipCode() + ')</span>');
+        }
+    }
+});
+```
