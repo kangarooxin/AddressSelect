@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery.min.js"></script>
+	<script type="text/javascript" src="address.js"></script>
+	<script type="text/javascript" src="jquery.ChinaAddressSelect.js"></script>
+	<script>
+	$(function(){
+		$('#addressSelect').ChinaAddressSelect({
+			province_name: 'my_province',    
+	    	city_name: 'my_city',
+	    	county_name: 'my_county',
+	    	province_class: 'my_province',    
+	    	city_class: 'my_city',
+	    	county_class: 'my_county',
+	    	province_val: 5,
+	    	city_val: 53,
+	    	county_val: 647,
+			callback:function(prov, city, county, zipcode) {
+				$('#addressCode').html(prov + ':' + city + ":" + county + ":" + zipcode);
+				$('#province').html($.ChinaAddressSelect.get(prov).getName() + ":" + $.ChinaAddressSelect.get(prov).getType());
+				$('#city').html($.ChinaAddressSelect.get(city).getName() + ":" + $.ChinaAddressSelect.get(city).getType());
+				$('#county').html($.ChinaAddressSelect.get(county).getName() + ":" + $.ChinaAddressSelect.get(county).getType() + ":" + $.ChinaAddressSelect.get(county).getZipCode());
+			}
+		});
+		$('.address').ChinaAddressShow();
+	});
+	</script>
+</head>
+<body>
+	<div id="addressSelect"></div>
+	<div id="addressCode"></div>	
+	<div id="province"></div>	
+	<div id="city"></div>	
+	<div id="county"></div>	
+	<div class="address" address="5:53:647"></div>
+	<div class="address" address="2"></div>
+	<div class="address" address="36"></div>
+	<div class="address" address="389"></div>
+</body>
+</html>
