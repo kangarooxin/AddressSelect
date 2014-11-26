@@ -3,6 +3,9 @@ ChinaAddressSelect
 
 中国省市三级联动
 
+For **demo**, usage, and examples, see:
+http://kangarooxin.github.io/ChinaAddressSelect/
+
 ### Useage:
 
 ```javascript
