@@ -1,3 +1,16 @@
+/*!
+ * jQuery Address Plugin v0.1.0
+ *
+ * Copyright 2014
+ *
+ * @author Pangxin
+ * @mail   pangxin001@163.com
+ *
+ *
+ * $('#addressSelect').ChinaAddressSelect();
+ *
+ *
+ */
 ;(function($, window, document,undefined) {
 	//定义构造函数
 	var ChinaAddressSelect = function(ele, options) {
