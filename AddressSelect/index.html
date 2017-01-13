@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery.min.js"></script>
+	<script src="underscore-min.js"></script>
+	<script type="text/javascript" src="address-data.js"></script>
+	<script type="text/javascript" src="jquery.AddressSelect.js"></script>
+	<script>
+	$(function(){
+		$('.addressSelect').AddressSelect({
+			country_val: 1,
+			callback: function(data) {
+				if(data) {
+					$('#result').html(data.address);
+				} else {
+					$('#result').html('');
+				}
+			}
+		});
+	});
+	</script>
+</head>
+<body>
+	<div class="addressSelect">
+		<!-- <select name="country"></select> -->
+		<select name="province"></select>
+		<select name="city"></select>
+		<select name="district"></select>
+	</div>
+	<div id="result"></div>
+</body>
+</html>
