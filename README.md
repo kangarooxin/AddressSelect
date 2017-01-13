@@ -4,7 +4,7 @@ AddressSelect
 省市三级联动
 
 For **demo**, usage, and examples, see:
-http://kangarooxin.github.io/AddressSelect/
+http://kangarooxin.github.io/ChinaAddressSelect/
 
 ### Useage:
 
