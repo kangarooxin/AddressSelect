@@ -38,3 +38,17 @@ $('.addressSelect').AddressSelect({
     }
 });
 ```
+### hide Country
+
+```html
+<div class="addressSelect">
+    <select name="province"></select>
+    <select name="city"></select>
+    <select name="district"></select>
+</div>
+```
+```javascript
+$('.addressSelect').AddressSelect({
+    country: 1
+});
+```
