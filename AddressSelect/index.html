@@ -11,6 +11,7 @@
 	$(function(){
 		$('.addressSelect').AddressSelect({
 			country_val: 1,
+			always_show: true,
 			callback: function(data) {
 				if(data) {
 					$('#result').html(data.address);
